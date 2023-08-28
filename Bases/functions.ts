@@ -1,34 +1,37 @@
-// Basic Functions
-const sum = (a: number, b: number): number => {
-    return a + b;
-}
+(() => {
+    // Basic Functions
+    const sum = (a: number, b: number): number => {
+        return a + b;
+    }
 
-const count = (heroes: string[]): number => {
-    return heroes.length;
-}
-const superHeroes: string[] = ["Flash", "Arrow", "Superman", "Green Lantern"];
-count(superHeroes);
+    const count = (heroes: string[]): number => {
+        return heroes.length;
+    }
+    const superHeroes: string[] = ["Flash", "Arrow", "Superman", "Green Lantern"];
+    count(superHeroes);
 
 //Default Params
-const callBatman = (call: boolean = true): void => {
-    if (call) {
-        console.log("Batiseñal activada");
+    const callBatman = (call: boolean = true): void => {
+        if (call) {
+            console.log("Batiseñal activada");
+        }
     }
-}
 
 
-callBatman();
+    callBatman();
 
 // Rest?
-const joinHeroes = (...heroes: string[]): string => {
-    return heroes.join(", ");
-}
+    const joinHeroes = (...heroes: string[]): string => {
+        return heroes.join(", ");
+    }
 
 
 // Function Type
-const doesNothing = (number: number, text: string, boolean: boolean, array: any[]):void => {
-}
+    const doesNothing = (number: number, text: string, boolean: boolean, array: any[]): void => {
+    }
 
 // Create the type of function that accepts doesNothing
-let alsoDoesNothing: (n: number, t: string, b: boolean, a: any[]) => void;
-alsoDoesNothing = doesNothing;
+    let alsoDoesNothing: (n: number, t: string, b: boolean, a: any[]) => void;
+    alsoDoesNothing = doesNothing;
+
+})();
